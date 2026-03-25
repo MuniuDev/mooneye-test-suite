@@ -27,10 +27,10 @@
 ;   A: byte to send
 serial_send_byte:
   ldh (<SB), a
-  ld a, $83
+  ld a, $81
   ldh (<SC), a
 
-  ld a, $12 ; TODO: optimize this delay
+  ld a, $48 ; TODO: optimize this delay
 - ldh (<hram.serial_timeout), a
 
   ldh a, (<SC)
